@@ -10,8 +10,8 @@
         @custom-variant dark (&:where(.dark, .dark *));
           @layer components {
         .btn-primary {
-            @apply px-6 py-3 bg-red-800 text-white rounded-xl
-                   hover:bg-orange-400
+            @apply px-1 py-2 bg-red-800 text-white rounded-xl
+                   hover:bg-fuchsia-700
                    dark:bg-slate-700 dark:hover:bg-slate-500;
         }
     }
@@ -24,88 +24,131 @@
             dark:bg-slate-800 dark:text-white transition-colors duration-500">
 
     <nav class="flex justify-between items-center p-4 bg-slate-300 dark:bg-slate-900">
-        <h1 class="text-red-800 text-3xl font-bold">Espresso</h1>
 
-        <button id="theme-toggle" class="btn-primary">Toggle
-            Theme</button>
-        <script src="script.js"> </script>
-        <script>
-            const toggleDarkButton = document.querySelector('#theme-toggle');
-            const html = document.documentElement;
-
-            toggleDarkButton.addEventListener('click', function () {
-                html.classList.toggle('dark');
-
-                if (html.classList.contains('dark')) {
-                    toggleDarkButton.textContent = 'Light Mode';
-                } else {
-                    toggleDarkButton.textContent = 'Dark Mode';
-                }
-            });
-        </script>
-
+        <h1 class="text-red-800 text-3xl font-bold">Potatoo Destructo</h1>
 
 
 
         <ul class="flex space-x-4">
+
+
             <li><a href="#home" class="hover:text-red-800 duration-500">Home</a></li>
-            <li><a href="#about" class="hover:text-red-800 duration-500">About</a></li>
-            <li><a href="#projects" class="hover:text-red-800 duration-500">Projects</a></li>
+            <li><a href="#project" class="hover:text-red-800 duration-500">Projects</a></li>
+            <li><a href="#message" class="hover:text-red-800 duration-500">Message</a></li>
             <li><a href="#contact" class="hover:text-red-800 duration-500">Contact</a></li>
 
+
+            <button id=replay class=" px-1 py-1.5 bg-blue-600 text-white rounded-xl
+                   hover:bg-gray-400
+                   dark:bg-slate-700 dark:hover:bg-slate-500">replay intro</button>
+            <button id="theme-toggle" class="btn-primary">🌙Dark Mode</button>
         </ul>
 
     </nav>
-    <header id="home" class="bg-gray-400 text-red-600 py-16 px-6">
-        <h1 class=" text-4xl sm:text-2xl md:text-6xl font-extrabold mb-5">
-            Welcome <span class=" text-yellow-800 font-extrabold">To</span> <span class=" text-red-800 font-extrabold">
-                <br> Espresso</span> <span class=" text-blue-800 font-extrabold">Cafe</span>
 
-        </h1>
-        <p class="text-lg sm:text-base md:text-xl text-blue-600 dark:text-white">
-            Making chaos look organized
-        </p>
-        <a href="#services" class="btn-primary mt-6 inline-block">View Our Services
-        </a>
+    <header id="home" class="bg-gray-400 text-red-600 py-5 px-6">
+        <h2 class=" text-4xl sm:text-2xl md:text-3xl font-extrabold mb-5">
+            Good <span class=" text-yellow-800 font-extrabold">Day</span> <span class=" text-red-800 font-extrabold">
+                <br> Worms</span> <span class=" text-blue-800 font-extrabold">!!</span>
+
+            </h1>
+            <p class="text-lg sm:text-base md:text-xl text-blue-600 dark:text-white">
+                Making chaos look organized
+            </p>
+            <a href="#services" class="btn-primary mt-6 inline-block">View My Services
+            </a>
 
     </header>
     <main class="flex flex-wrap gap-4  md:gap-[30px] p-4 md:p-[50px] m-2 md:m-[50px]">
 
-        <section id="about"
+        <section id="project"
             class="flex-1 min-w-0 md:min-w-[280px] border-2 border-red-500 bg-blue-100 rounded-2xl p-6 ">
-            <h2 class="text-2xl text-blue-800 font-bold mb-4">About us</h2>
-            <p class="text-blue-600 dark:text-gray-600">
-                We are passionate about coffee and creating memorable moments with every cup. Our goal is to serve
-                delicious, quality coffee that brings people together, brightens your day, and makes every sip special.
-                Thank you for being part of our coffee journey!
+            <h2 class="text-2xl text-blue-800 font-bold mb-4">Projects</h2>
+            <p class="text-blue-600 dark:text-gray-500">
+                Custom Http Web Server
             </p>
+            <p class="text-orange-600 dark:text-gray-700">
+                Authentication system
+            </p>
+            <p class="text-red-900 dark:text-gray-900">
+                Automatic back Smasher
+            </p>
+
 
         </section>
         <section id="services"
             class="flex-1 min-w-0 md:min-w-[280px] border-2 border-blue-500 bg-blue-100 rounded-2xl p-6">
-            <h2 class="text-2xl text-blue-800 font-bold mb-4">Our Services</h2>
+            <h2 class="text-2xl text-blue-800 font-bold mb-4">My Services</h2>
             <p class="text-blue-600 dark:text-gray-600">
-                Here are some of the services we offer:
+                Here are some of the services I offer:
             </p>
             <ul class="list-disc list-inside text-blue-600 dark:text-gray-600">
-                <li class=" text-red-500 font-semibold">Coffee Brewing</li>
-                <li class=" text-gray-500 font-semibold">Custom Coffee Blends</li>
-                <li class=" text-yellow-600 font-semibold">Cafe Events</li>
+                <li class=" text-red-500 font-semibold">System desgin</li>
+                <li class=" text-gray-500 font-semibold">Web development</li>
+                <li class=" text-yellow-600 font-semibold">ui design</li>
+                <li class=" text-blue-600 font-semibold">back smash</li>
             </ul>
         </section>
+
+
+
         <section id="contact"
             class="flex-1 min-w-0 md:min-w-[280px] border-2 border-red-500 bg-blue-100 rounded-2xl p-6">
             <h2 class="text-2xl text-blue-800 font-bold mb-4">Contact</h2>
+
             <p class="text-blue-600 dark:text-gray-600">
-                Feel free to reach out to us!
+                Set your worries down with me
             </p>
-            <p class="text-blue-600 dark:text-gray-600">
-                Email: espresso.cafe@gmail.com
-                <br>
-                Phone: (123) 456-7890
+            <p class="text-blue-600 dark:text-gray-600 border-2 border-blue-500 rounded-lg p-2">
+                Email: diolito@gmail.com
+
+            </p>
+            <p class="text-blue-600 dark:text-gray-600 border-2 border-blue-500 rounded-lg p-2">
+                Phone: 09123456789
             </p>
         </section>
+
+        <section id="message"
+            class="flex-1 min-w-0 md:min-w-[280px] border-2 border-blue-500 bg-blue-100 rounded-2xl p-6">
+            <h2 class="text-2xl text-blue-800 font-bold mb-4">Send me a message</h2>
+            <form class="flex flex-col gap-4">
+                <input type="text" placeholder="Your Name" class="border-2 border-blue-500 rounded-lg p-2">
+                <input type="email" placeholder="Your Email" class="border-2 border-blue-500 rounded-lg p-2">
+                <textarea placeholder="Your Message" class="border-2 border-blue-500 rounded-lg p-2"></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script>
+        const toggleDarkButton = document.querySelector('#theme-toggle');
+        const html = document.documentElement;
+
+        toggleDarkButton.addEventListener('click', function () {
+            html.classList.toggle('dark');
+            toggleDarkButton.textContent = html.classList.contains('dark') ? '☀️Light Mode' : '🌙Dark Mode';
+            gsap.fromTo('#theme-toggle', { rotation: -360, duration: 0.5, ease: 'power.out' }, { rotation: 360, duration: 0.5, ease: 'power.out' });
+        });
+
+        const tl = gsap.timeline({ defaults: { duration: 0.7, ease: 'power2.out' } });
+
+        tl.from("h1", { x: 60, opacity: 0, duration: 1, ease: "bounce.out", repeat: -1 })
+            .from('nav', { y: -40, opacity: 0 })
+            .from('nav', { backgroundColor: "#f87171", stagger: 0.5, repeat: -1, yoyo: true })
+            .from('header', { y: 30, opacity: 0, stagger: 0.15 })
+            .from('main ', { y: 30, opacity: 0, stagger: 0.15 })
+            .from('section', { y: 30, opacity: 0, stagger: 0.15 })
+            .from('footer', { y: 30, opacity: 0, stagger: 0.5 });
+
+        const replayButton = document.querySelector('#replay');
+        replayButton.addEventListener('click', () => tl.restart());
+        
+    </script>
+    <footer class="bg-gray-400 text-red-600 py-4 px-6">
+        <h2 class="text-blue-900 text-bold">©alrights reserved 2026</h2>
+    </footer>
 
 </body>
 
